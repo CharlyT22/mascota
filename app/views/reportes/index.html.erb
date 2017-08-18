@@ -1,0 +1,100 @@
+<h2>Reporte Edad</h2>
+
+<table>
+  <thead>
+
+    <tr>
+      <th>Especie</th>
+      <th>Edad</th>
+      <th>Peso</th>
+      <th><b>Precio</b></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @animalsOrdenados.each do |animal| %>
+      <tr>
+        <td><%= animal.especie %></td>
+        <td><%= animal.edad %></td>
+        <td><%= animal.peso %></td>
+        <td><%= animal.precio %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<% animalMenor = @animalsOrdenados.first %>
+<% animalMayor = @animalsOrdenados.last %>
+<h3> El animal más joven que tenemos en existencia es :</h3> <h4><%= animalMenor.especie %> </h4>
+<h3> El animal más viejo que poseemos es:</h3> <h4><%= animalMayor.especie %> </h4>
+
+<h2>Reporte Peso</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Especie</th>
+      <th>Edad</th>
+      <th>Peso</th>
+      <th><b>Precio</b></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @animalsPeso.each do |animal| %>
+      <tr>
+        <td><%= animal.especie %></td>
+        <td><%= animal.edad %></td>
+        <td><%= animal.peso %></td>
+        <td><%= animal.precio %></td>
+      
+       </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<% animalLig = @animalsPeso.first %>
+<% animalPes = @animalsPeso.last %>
+<h3> El animal más ligero que tenemos es:</h3> <h4><%= animalLig.especie %> </h4>
+<h3> El animal más pesado que tenemos es:</h3> <h4><%= animalPes.especie %> </h4>
+
+<h2>Reporte Precio</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Especie</th>
+      <th>Edad</th>
+      <th>Peso</th>
+      <th><b>Precio</b></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @animalsPrecio.each do |animal| %>
+      <tr>
+        <td><%= animal.especie %></td>
+        <td><%= animal.edad %></td>
+        <td><%= animal.peso %></td>
+        <td><%= animal.precio %></td>
+      
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<% animalBara = @animalsPrecio.first %>
+<% animalCaro = @animalsPrecio.last %>
+<h3> El animal más barato que tenemos es:</h3> <h4><%= animalBara.especie %> </h4>
+<h3> El objeto que pesa mas es:</h3> <h4><%= animalCaro.especie%> </h4>
+
+
+<div style="text-align:center;">
+<%= link_to 'Atrás', animals_path %>
+</div>
+
+<%= Time.now %>
