@@ -4,6 +4,7 @@
   <thead>
 
     <tr>
+      <th>ID</th>
       <th>Especie</th>
       <th>Edad</th>
       <th>Peso</th>
@@ -15,6 +16,7 @@
   <tbody>
     <% @animalsOrdenados.each do |animal| %>
       <tr>
+        <td><%= animal.id %></td>
         <td><%= animal.especie %></td>
         <td><%= animal.edad %></td>
         <td><%= animal.peso %></td>
@@ -35,6 +37,7 @@
 <table>
   <thead>
     <tr>
+      <th>ID</th>
       <th>Especie</th>
       <th>Edad</th>
       <th>Peso</th>
@@ -46,6 +49,7 @@
   <tbody>
     <% @animalsPeso.each do |animal| %>
       <tr>
+        <td><%= animal.id %></td>
         <td><%= animal.especie %></td>
         <td><%= animal.edad %></td>
         <td><%= animal.peso %></td>
@@ -66,6 +70,7 @@
 <table>
   <thead>
     <tr>
+      <th>ID</th>
       <th>Especie</th>
       <th>Edad</th>
       <th>Peso</th>
@@ -77,6 +82,7 @@
   <tbody>
     <% @animalsPrecio.each do |animal| %>
       <tr>
+        <td><%= animal.id %></td>
         <td><%= animal.especie %></td>
         <td><%= animal.edad %></td>
         <td><%= animal.peso %></td>
@@ -90,11 +96,11 @@
 <% animalBara = @animalsPrecio.first %>
 <% animalCaro = @animalsPrecio.last %>
 <h3> El animal más barato que tenemos es:</h3> <h4><%= animalBara.especie %> </h4>
-<h3> El objeto que pesa mas es:</h3> <h4><%= animalCaro.especie%> </h4>
+<h3> El animal más pinche caro es:</h3> <h4><%= animalCaro.especie%> </h4>
 
-
+<!--
 <div style="text-align:center;">
 <%= link_to 'Atrás', animals_path %>
 </div>
-
+-->
 <%= Time.now %>

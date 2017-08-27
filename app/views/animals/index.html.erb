@@ -4,7 +4,11 @@
 
 <table>
   <thead>
+   <link href="https://blackrockdigital.github.io/startbootstrap-grayscale/css/grayscale.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
     <tr>
+      <th>ID</th>
       <th>Especie</th>
       <th>Edad (Años)</th>
       <th>Peso (Kg)</th>
@@ -16,6 +20,7 @@
   <tbody>
     <% @animals.each do |animal| %>
       <tr>
+        <td><%= animal.id %></td>
         <td><%= animal.especie %></td>
         <td><%= animal.edad %></td>
         <td><%= animal.peso %></td>
@@ -29,6 +34,6 @@
 </table>
 
 <br>
-
+<!--
 <%= link_to 'Añadir Animal', new_animal_path %>
 <%= link_to 'Reporte', reportes_path %>
